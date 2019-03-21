@@ -25,9 +25,6 @@ if(config('app.api')){
   $router->get('/api/{endpoint:.*}','NBAAPIController@returnRSS');
 }
 
-// TESTING ROUTES
-$router->get('/debug','NBAAPIController@debug');
-
 /*
 |--------------------------------------------------------------------------
 | Catch-All Route
