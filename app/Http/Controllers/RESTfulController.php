@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use GrahamCampbell\Flysystem\Facades\Flysystem;
 use Illuminate\Support\Facades\View;
 
-class NBAAPIController extends Controller
+class RESTfulController extends Controller
 {
   /**
    * Create a new controller instance.

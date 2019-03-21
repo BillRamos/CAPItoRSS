@@ -22,7 +22,7 @@
 */
 
 if(config('app.api')){
-  $router->get('/api/{endpoint:.*}','NBAAPIController@returnRSS');
+  $router->get('/api/{endpoint:.*}','RESTfulController@returnRSS');
 }
 
 /*
