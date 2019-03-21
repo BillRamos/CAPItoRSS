@@ -34,7 +34,7 @@ Download and install Composer into your `/usr/local/bin` directory so that it ca
 ```shell
 $ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
-You should now have Composer install globally. If you're having trouble calling `composer` from your terminal, you probably don't have `/usr/local/bin` registered in your PATH file. Check, and add it if you need to.
+You should now have Composer installed globally. If you're having trouble calling `composer` from your terminal, you probably don't have `/usr/local/bin` registered in your PATH file. Check, and add it if you need to.
 
 ### Installing CAPItoRSS
 First, clone this repository into your local dev environment.
