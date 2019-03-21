@@ -114,7 +114,7 @@ return [
       // 'cache' => 'foo'
     ],
 
-    's3' => [
+    'aws' => [
       'driver' => 'awss3',
       'key' => env('AWS_ACCESS_KEY_ID'),
       'secret' => env('AWS_SECRET_ACCESS_KEY'),
@@ -123,7 +123,7 @@ return [
       'version' => env('AWS_VERSION','latest'),
       'public_url_root' => env('AWS_PUBLIC_URL_ROOT',''),
       'public_path' => '/'.env('AWS_UPLOAD_PATH',''),
-      'endpoint' => env('AWS_URL'),
+      // 'endpoint' => 'custom-s3-endpoint',
       // 'bucket_endpoint' => false,
       // 'calculate_md5' => true,
       // 'scheme' => 'https',
