@@ -1,0 +1,15 @@
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+.DS_Store
+.extra
+.phpunit.result.cache
+Thumbs.db
+npm-debug.log
+yarn-error.log
