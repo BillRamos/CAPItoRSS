@@ -88,7 +88,7 @@ Open up `.env` in your favorite text editor and let's get to work. There are sev
 
 |Variable|Type|Default|Required|Description|
 |--|:--:|:--:|:--:|--|
-|**RSS_DEFAULT_TITLE**|string|||Default title of your generated RSS feeds. You can change this value on a per-feed basis by using query strings while using the RESTful API or by specifying a title in the `config/static.php` definitions file.|
+|**RSS_DEFAULT_TITLE**|string|||Default title of your generated RSS feeds. You can change this value on a per-feed basis by using query strings while using the RESTful API or by specifying a title in the `config/static.php` definitions file when using the static feed generation service.|
 |**RSS_DEFAULT_LINK**|string|||Default organization link of your generated RSS feeds. Per-feed customization works the same as noted in **RSS_DEFAULT_TITLE**.
 |**RSS_DEFAULT_COPYRIGHT_OWNER**|string|||Default copyright owner of your generated RSS feeds. Per-feed customization works the same as noted in **RSS_DEFAULT_TITLE**.|
 |**RSS_DEFAULT_DESCRIPTION**|string|||Default feed description of your generated RSS feeds. Per-feed customization works the same as noted in **RSS_DEFAULT_TITLE**.|
