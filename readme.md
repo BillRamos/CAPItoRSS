@@ -15,7 +15,7 @@ If you're planning on using the static feed generation service, you'll also need
 
 I would imagine you have Git installed on your machine already, but if not, install it. Note that you may need to precede `apt-get` with `sudo` if the active account doesn't have superuser access.
 ```shell
-apt-get update
+$ apt-get update
 $ apt-get install git
 ```
 
