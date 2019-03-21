@@ -40,7 +40,9 @@ class GenerateStaticFeeds extends Command
   public function handle()
   {
     $this->line("\n".'==========================================='."\n\n".'Beginning static feed generation service...'."\n\n".'==========================================='."\n\n");
+    // Define testing boolean as false to start
     $testing = false;
+    // Check for --test flag and set testing boolean to true if it exists
     if($this->option('test')){
       $testing = true;
       $this->line("\n".'Found test flag. Will cycle through defined feeds to ensure that feed generation and upload will work but will not actually upload any files.'."\n\n");
@@ -221,31 +223,39 @@ class GenerateStaticFeeds extends Command
                       $this->line($filename. ' generated for "'.$output_type.'" endpoint.'."\n");
                       // Start Flysystem connection with specified type
                       $filesystem = Flysystem::connection($output_type);
-                      // Check whether we are in a testing environment. If so, run connection tests. If not, attempt to upload files.
+                      // Check whether we are in a testing environment. If so, run connection tests. If not, attempt to upload files
                       if($testing){
                         $this->line('Attempting to connect to "'.$output_type.'" endpoint. This script is running in test mode so no actual uploads will occur.');
+                        // Use try/catch logic to try and connect to the current endpoint and gracefully report an error on fail instead of throwing an exception and halting the entire function
                         try {
                           if($output_type === 'local' || $filesystem->getAdapter()->getConnection()){
+                            // Connected to the endpoint, let the people know!
                             $this->info('Successfully connected to the to the "'.$output_type.'" endpoint.'."\n");
                           }
                         }
                         catch (\Exception $e){
+                          // Could not connect to endpoint, return an error to the console and continue
                           $this->error('Could not establish a connection to the "'.$output_type.'" endpoint.');
                           $this->error($e->getMessage()."\n");
                         }
                       }
                       else{
                         $this->line('Attempting to upload '.$filename.' to "'.$output_type.'" endpoint.');
+                        // Use try/catch logic to try and upload the generated feed to the current endpoint and gracefully report an error on fail instead of throwing an exception and halting the entire function
                         try {
                           $upload = $filesystem->put($url_path.$filename, $feed);
+                          // Got past the upload without throwing an exception, which means credentials and connection was valid
                           if($upload){
+                            // Successfully uploaded to the endpoint, let the people know!
                             $this->info('Uploaded '.$filename.' to '.$url.'!'."\n");
                           }
                           else {
+                            // Connected to the endpoint but could not upload the file - this will likely only get reached on a timeout
                             $this->error('Could not upload '.$filename.'.'."\n");
                           }
                         }
                         catch (\Exception $e){
+                          // Could not connect to endpoint, return an error to the console and continue
                           $this->error('Could not establish a connection to the "'.$output_type.'" endpoint.');
                           $this->error($e->getMessage()."\n");
                         }
