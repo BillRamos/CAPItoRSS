@@ -68,7 +68,7 @@ $ cp .env.example .env
 ```
 Open up `.env` in your favorite text editor and let's get to work. There are several variables here that will need to be configured before CAPItoRSS will work. Here's a breakdown of all of the variables.
 
-#### <center>App Variables</center>
+#### App Variables
 <center>Variables to control the general functionality of CAPItoRSS.</center>
 Values inherited from `.env` file and defined in [config/app.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/app.php).
 
@@ -84,8 +84,8 @@ Values inherited from `.env` file and defined in [config/app.php](https://github
 |**STATIC_ENABLED**|boolean|false|✓|Turns the static feed generation service on or off. This is `false` by default. If you plan on using this service, make sure you read the instructions further down this document to ensure that you've set up your environment appropriately.|
 |**CAPI_ACCESS_TOKEN**|string||✓|The access token for the NBA's Content API. If this isn't set accurately, nothing will work. You can find this value in the NBA's Content API documentation.|
 
-#### <center>RSS Variables</center>
-<center>Variables to define default values for generated RSS feeds.</center>
+#### RSS Variables
+Variables to define default values for generated RSS feeds.
 Values inherited from `.env` file and defined in [config/rss.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/rss.php).
 
 |Variable|Type|Default|Required|Description|
@@ -97,8 +97,8 @@ Values inherited from `.env` file and defined in [config/rss.php](https://github
 |**RSS_DEFAULT_LINK**|string|||Default organization link of your generated RSS feeds. Per-feed customization works the same as noted in **RSS_DEFAULT_TITLE**.|
 |**RSS_DEFAULT_LANGUAGE**|string|en-us||Default language of your generated RSS feeds. Per-feed customization works the same as noted in **RSS_DEFAULT_TITLE**.|
 
-#### <center>Output Endpoint Variables*</center>
-<center>Variables used to configure output/upload endpoints for the static file generation service.</center>
+#### Output Endpoint Variables*
+Variables used to configure output/upload endpoints for the static file generation service.
 *You can leave these blank if you are not using the static file generation service.
 Values inherited from `.env` file and defined in [config/flysystem.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/flysystem.php).
 
