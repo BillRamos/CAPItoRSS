@@ -70,7 +70,7 @@ Open up `.env` in your favorite text editor and let's get to work. There are sev
 
 #### <center>App Variables</center>
 <center>Variables to control the general functionality of CAPItoRSS.</center>
-<center>Values inherited from `.env` file and defined in [config/app.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/app.php).</center>
+Values inherited from `.env` file and defined in [config/app.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/app.php).
 
 |Variable|Type|Default|Required|Description|
 |--|:--:|:--:|:--:|--|
@@ -86,7 +86,7 @@ Open up `.env` in your favorite text editor and let's get to work. There are sev
 
 #### <center>RSS Variables</center>
 <center>Variables to define default values for generated RSS feeds.</center>
-<center>Values inherited from `.env` file and defined in [config/rss.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/rss.php).</center>
+Values inherited from `.env` file and defined in [config/rss.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/rss.php).
 
 |Variable|Type|Default|Required|Description|
 |--|:--:|:--:|:--:|--|
@@ -99,8 +99,8 @@ Open up `.env` in your favorite text editor and let's get to work. There are sev
 
 #### <center>Output Endpoint Variables*</center>
 <center>Variables used to configure output/upload endpoints for the static file generation service.</center>
-<center>\*You can leave these blank if you are not using the static file generation service.</center>
-<center>Values inherited from `.env` file and defined in [config/flysystem.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/flysystem.php).</center>
+*You can leave these blank if you are not using the static file generation service.
+Values inherited from `.env` file and defined in [config/flysystem.php](https://github.com/BillRamos/CAPItoRSS/blob/master/config/flysystem.php).
 
 |Variable|Type|Default|Required|Description|
 |--|:--:|:--:|:--:|--|
